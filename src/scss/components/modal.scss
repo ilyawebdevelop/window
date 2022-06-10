@@ -8,14 +8,14 @@
   // background-color: rgba(#E3EEFF, .4);
   background-color: #FBFCFF;
   padding: 25px 80px;
-  border-radius: 36px;  
+  border-radius: 15px;  
   &__title {
-    font-weight: $bold;
+    font-weight: 700;
     font-size: 27px;
-    line-height: 37px;
-    letter-spacing: -0.04em;    
-    color: $main-color;    
-    margin-bottom: 4.5px;
+    line-height: 29px;
+    letter-spacing: -0.04em;
+    color: #000;
+    margin-bottom: 23.5px;
     text-align: center;
   }
   &__descr {
@@ -31,7 +31,7 @@
     line-height: 10px; 
     
     max-width: 180px;
-    margin: 0 auto;
+    margin: 15px auto 0;
     a {
       color: $blue-color;
       text-decoration: underline;
@@ -50,6 +50,8 @@
   }
   .input-wrapper {
     position: relative;
+    margin-top: 0;
+    margin-bottom: 0;
     &::after {
       content: '';
       position: absolute;
@@ -57,27 +59,28 @@
       top: 50%;
       transform: translateY(-50%);
       width: 12px;
-      height: 12px;
-     
+      height: 12px;     
       background-repeat: no-repeat;
       background-position: center center;
       background-size: cover;
     }
     input {
       background: $white-color;
-      border: 0.7px solid #5C9DFF;
-      border-radius: 10px;   
-      padding: 8px 15px;   
-      width: 341px; 
-      font-weight: $semibold;
-      font-size: 14px;
-      line-height: 20px;      
-      color: #000000;      
-      &::placeholder {
-        font-weight: $semibold;
-        font-size: 14px;
-        line-height: 20px;
-        color: rgba(#000000, .2);   
+      border: 1px solid $blue-color;
+      border-radius: 5px;
+      font-family: "Roboto";    
+      font-size: 15px;
+      line-height: 18px;
+      color: $main-color;
+      height: 50px;
+      padding: 0 25px;
+      width: 325px;
+      margin-bottom: 10px; 
+      &::placeholder {       
+        font-family: "Roboto";    
+        font-size: 15px;
+        line-height: 18px;
+        color: $gray-color;
         opacity: 1; 
       }
       @media (max-width: 991px){
@@ -85,10 +88,9 @@
       }
     }
     @media (max-width: 991px){
-      width: 350px;
-      margin-bottom: 6px;
+      width: 350px;      
     }
-    @media (max-width: 420px){
+    @media (max-width: 575px){
       width: 100%;
     }
   }
