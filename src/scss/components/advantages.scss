@@ -1,0 +1,54 @@
+// advantages
+.advantages {
+  padding-top: 0;
+  padding-bottom: 0;
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);   
+    border-left: 1px solid #ECECEC;
+    @media (max-width: 575px) {
+      border-left: none;
+    }
+  }
+  &__item {
+    position: relative;
+    padding: 32px 0 32px 0;
+    grid-column: 3 span;
+    border-right: 1px solid #ECECEC;
+    &-img {
+      height: 84px;
+      img {
+        margin: 0 auto;
+      }
+    }
+    &-title {
+      font-family: $font-family-second;
+      font-size: 32px;
+      line-height: 32px; 
+      color: $main-color;
+      font-weight: $bold;
+      text-transform: uppercase;
+      text-align: center;
+      @media (max-width: 991px){
+        font-size: 28px;
+        line-height: 28px;
+      }
+    }
+    &-descr { 
+      font-size: 15px;
+      line-height: 18px;
+      color: #888888;     
+      max-width: 202px;
+      text-align: center;
+      margin: 12px auto 0;
+    }
+    @media (max-width: 991px){
+      grid-column: 6 span;
+    }
+    @media (max-width: 575px){
+      grid-column: 12 span;
+      border-right: none;
+      padding: 20px 0 20px 0;
+    }
+  }
+}

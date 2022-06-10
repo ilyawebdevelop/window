@@ -1,0 +1,47 @@
+// tooltip
+.tooltip {  
+  position: absolute;
+  right: 30px;
+  top: 30px;
+
+  &__btn {
+    @include flex-all-center;
+    margin-left: auto;
+    border-radius: 100%;
+    width: 24px;
+    height: 24px;     
+
+    &:focus {
+      + .tooltip__txt {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+
+    @include hover {
+      + .tooltip__txt {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+
+  &__txt {
+    min-width: 120px;
+    position: absolute;
+    top: 0;
+    right: 100%;
+    border-radius: 5px;
+    padding: 15px 20px;
+    box-shadow: 0 2px 8px rgba(20, 16, 36, 0.1);
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 160%;
+    text-align: center;
+    color: $main-color;
+    background: $white-color;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  }
+}

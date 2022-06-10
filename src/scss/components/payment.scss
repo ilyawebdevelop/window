@@ -1,0 +1,101 @@
+// payment
+.payment {  
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  &__col {
+    grid-column: 6 span;
+    @media (max-width: 991px){
+      grid-column: 12 span;
+    }
+  }
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    &-item {
+      display: flex;
+      margin-bottom: 43px;
+    }
+    &-icon {
+      box-sizing: content-box;
+      margin-right: 37px;
+      min-width: 65px;
+      @media (max-width: 575px){
+        margin-right: 21px;
+        min-width: 48px;        
+      }
+    }
+    &-title {     
+      font-weight: $medium;
+      font-size: 20px;
+      line-height: 23px;
+      color: $main-color;   
+      margin-bottom: 14px;   
+    }
+    &-text {      
+      font-size: 16px;
+      line-height: 22px;
+      color: #636363;      
+      max-width: 414px;
+      @media (max-width: 575px){
+        font-size: 15px;
+        line-height: 20px;
+      }
+    }
+  }
+  &-callback {
+    position: relative;
+    background: linear-gradient(97.95deg, #FFF5DE 14.22%, #FFFBF1 93.92%);
+    border-radius: 3px;
+    padding: 33px 38px;    
+    &__title { 
+      font-weight: $medium;
+      font-size: 20px;
+      line-height: 23px;
+      color: $main-color;
+      margin-bottom: 19px;       
+    }
+    ul {
+      list-style: disc;
+      margin-bottom: 23px;
+      position: relative;
+      left: 20px;      
+      li {
+        font-size: 16px;
+        line-height: 22px;
+        color: #636363; 
+        @media (max-width: 575px){
+          font-size: 15px;
+          line-height: 20px;
+        }
+      }
+    }
+    &__icon-lg {
+      position: absolute;
+      right: 43px;
+      top: -23px;
+      width: 166px;
+      height: 166px;  
+      @media (max-width: 1199px){
+        width: 90px;
+        height: 90px; 
+      }
+      @media (max-width: 575px){
+        right: 20px;
+        width: 50px;
+        height: 50px; 
+      }
+    }
+  } 
+}
+.payment__content-item {
+  &:nth-child(1){
+    .payment__content-icon {
+      img {
+        @media (max-width: 575px){
+          width: 48px;
+        }
+      }
+    }
+  }
+}

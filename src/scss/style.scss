@@ -1,0 +1,48 @@
+// стили для модального окна
+@import "../../node_modules/graph-modal/dist/graph-modal.min";
+// стили для табов
+@import "../../node_modules/graph-tabs/dist/graph-tabs.min";
+
+// стили для библиотеки aos
+// @import "../../node_modules/aos/dist/aos";
+
+// стили для свайпера
+@import "../../node_modules/swiper/swiper-bundle.min";
+
+// @import "../../node_modules/simplebar/dist/simplebar.min";
+// Базовые подключения
+@import 'vars';
+@import 'mixins';
+@import 'fonts';
+@import 'reset';
+@import 'specifications';
+@import 'simplebar';
+
+// Подключения компонентов страницы
+@import "./components/btn";
+@import "./components/burger";
+@import "./components/tooltip";
+@import "./components/header";
+@import "./components/intro";
+@import "./components/advantages";
+@import "./components/some-products";
+@import "./components/calculation";
+@import "./components/stock";
+@import "./components/additions";
+@import "./components/about-main";
+@import "./components/questions";
+@import "./components/payment";
+@import "./components/callback-free";
+@import "./components/map";
+@import "./components/footer";
+@import "./components/accesories";
+@import "./components/reviews";
+@import "./components/create-window";
+@import "./components/profile-types";
+@import "./components/balcony-glass";
+@import "./components/balcony-prices";
+@import "./components/modal";
+
+
+
+

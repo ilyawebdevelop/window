@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/png" href="img/favicon.ico">
+	<link href="//vjs.zencdn.net/7.10.2/video-js.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.min.css">	
+	<title>Калькулятор</title>
+</head>
+
+<body>
+	
+	<div class="wrapper">
+		<!-- Header -->
+<header class="header" id="header">
+  <div class="header__top">
+    <div class="container">
+      <div class="header__top-inner">
+      <!-- Hamburger Menu -->
+      <div class="hamburger" id="toggle">
+        <div class="top-bun"></div>
+        <div class="meat"></div>
+        <div class="bottom-bun"></div>
+      </div>
+        <nav class="header__nav">
+          <ul class="header__nav-list">
+            <li class="current-menu-item">
+              <a href="front-page.html">Главная</a>
+            </li>
+            <li>
+              <a href="#">О компании</a>
+            </li>
+            <li>
+              <a href="template-window.html">Пластиковые окна</a>
+            </li>
+            <li>
+              <a href="template-balcony.html">Лоджии и балконы</a>
+            </li>
+            <li>
+              <a href="template-glass.html">Остекление коттеджей</a>
+            </li>
+            <li>
+              <a href="#">Услуги</a>
+            </li>
+            <li>
+              <a href="#">Аксессуары</a>
+            </li>
+          </ul>
+          <ul class="header__btn-group-sm">
+            <li>
+              <a href="template-calculation.html" class="header__btn-calc header__btn btn">
+                <img src="img/icons/calc.svg" alt="btn-icon">
+                Калькулятор окон
+              </a>
+            </li>
+            <li>
+              <a href="template-window.html#stock" class="header__btn-stock header__btn btn">
+                <img src="img/icons/stock.svg" alt="btn-icon">
+                Акции и скидки
+              </a>
+            </li>
+            <li>
+              <a href="#callback-free" class="header__btn-free header__btn btn">
+                <img src="img/icons/froze-free.svg" alt="btn-icon">
+                Бесплатный замер
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <button class="btn-reset header_btn-director" data-graph-path="modal-order">
+          Написать директору
+        </button>
+      </div><!-- /header__top-inner -->
+    </div>
+  </div>
+  <div class="header__bottom">
+    <div class="container">
+      <div class="header__bottom-inner">
+        <a class="logo header__logo" href="front-page.html">
+          <img src="img/logo/logo.png" alt="logo">
+        </a>
+        <ul class="header__btn-group">
+          <li>
+            <a href="template-calculation.html" class="header__btn-calc header__btn btn">
+              <img src="img/icons/calc.svg" alt="btn-icon">
+              Калькулятор окон
+            </a>
+          </li>
+          <li>
+            <a href="template-window.html#stock" class="header__btn-stock header__btn btn">
+              <img src="img/icons/stock.svg" alt="btn-icon">
+              Акции и скидки
+            </a>
+          </li>
+          <li>
+            <a href="front-page.html#callback-free" class="header__btn-free header__btn btn">
+              <img src="img/icons/froze-free.svg" alt="btn-icon">
+              Бесплатный замер
+            </a>
+          </li>
+        </ul>
+        <div class="header__contacts">
+          <a class="header__tel" href="tel:+78430112259">
+            + 7 (843) 011-22-59
+          </a>
+          <a class="header__place" href="https://yandex.by/maps/236/naberezhnie-chelny/?from=mapframe&ll=52.394843%2C55.711605&mode=usermaps&source=mapframe&um=constructor%3A52496762378ffe61d856ee5ab57a71878a07e32127cb2ae5ed9d3849fbe6c764&utm_source=mapframe&z=18" target="_blank">г. Набережные Челны, ул. Пушкина, д. 7</a>
+        </div><!-- /header__contacts -->
+      </div><!-- /header__bottom-inner -->
+    </div>
+  </div>
+</header>
+		<main class="main">
+
+			<!-- calculation-window -->
+<section class="calculation-page" id="calculation-page">
+  <div class="calculation-page__title-wrapper">
+    <div class="container">
+      <h1 class="calculation-page__title">
+        Виды остекления
+      </h1>
+    </div>
+  </div>
+  <div class="calculation-page__content">
+    <div class="container">
+      <form action="#">
+        <div class="tabs">
+          <ul class="tabs__nav">
+            <li class="tabs__nav-item"><button class="tabs__nav-btn btn tabs__nav-btn--active" type="button">Расчет для
+                квартиры</button></li>
+            <li class="tabs__nav-item"><button class="tabs__nav-btn btn" type="button">Расчет для Коттедж / дом</button>
+            </li>
+            <li class="tabs__nav-item"><button class="tabs__nav-btn btn" type="button">Расчет для Лоджия /
+                балкон</button></li>
+          </ul>
+        </div>
+
+        <select class="open-select" name="open-select" id="open-select">
+          <option value="open-1">Поворотно-откидная</option>
+          <option value="open-1">Поворотная</option>
+          <option value="open-1">Глухая</option>
+        </select>
+
+        <div class="calculation-page__wrapper">
+          <div class="calculation-page__left">
+            <div class="sliders-wrapper">
+              <div class="swiper calculation-page__slider">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide calculation-page__slide">
+                    <label for="calculation-page__slide-1">
+                      <input class="chexbox-1" type="checkbox" id="calculation-page__slide-1" checked>
+                      <span><img src="img/calculation/window-sm-1.png" alt="window-image"></span>
+                    </label>
+                  </div>
+                  <div class="swiper-slide calculation-page__slide">
+                    <label for="calculation-page__slide-2">
+                      <input class="chexbox-1" type="checkbox" id="calculation-page__slide-2">
+                      <span><img src="img/calculation/window-sm-2.png" alt="window-image"></span>
+                    </label>
+                  </div>
+                  <div class="swiper-slide calculation-page__slide">
+                    <label for="calculation-page__slide-3">
+                      <input class="chexbox-1" type="checkbox" id="calculation-page__slide-3">
+                      <span><img src="img/calculation/window-sm-3.png" alt="window-image"></span>
+                    </label>
+                  </div>
+                  <div class="swiper-slide calculation-page__slide">
+                    <label for="calculation-page__slide-4">
+                      <input class="chexbox-1" type="checkbox" id="calculation-page__slide-4">
+                      <span><img src="img/calculation/window-sm-4.png" alt="window-image"></span>
+                    </label>
+                  </div>
+                  <div class="swiper-slide calculation-page__slide">
+                    <label for="calculation-page__slide-5">
+                      <input class="chexbox-1" type="checkbox" id="calculation-page__slide-5">
+                      <span><img src="img/calculation/window-sm-5.png" alt="window-image"></span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper calculation-lg-slider">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide calculation-lg-slide">
+                    <div class="calculation-lg-slide__img">
+                      <img src="img/calculation/window-lg-1.png" alt="image">
+                    </div>
+                  </div>
+                  <div class="swiper-slide calculation-lg-slide">
+                    <div class="calculation-lg-slide__img">
+                      <img src="img/calculation/window-lg-2.jpg" alt="image">
+                    </div>
+                  </div>
+                  <div class="swiper-slide calculation-lg-slide">
+                    <div class="calculation-lg-slide__img">
+                      <img src="img/calculation/window-lg-3.jpg" alt="image">
+                    </div>
+                  </div>
+                  <div class="swiper-slide calculation-lg-slide">
+                    <div class="calculation-lg-slide__img">
+                      <img src="img/calculation/window-lg-1.png" alt="image">
+                    </div>
+                  </div>
+                  <div class="swiper-slide calculation-lg-slide">
+                    <div class="calculation-lg-slide__img">
+                      <img src="img/calculation/window-lg-1.png" alt="image">
+                    </div>
+                  </div>
+                </div>
+                <div class="calculation-window-width">
+                  <div class="calculation-window__line">
+                  </div>
+                  <div class="input-wrapper">
+                    <input type="text" placeholder="1500" name="calc-width" id="calc-width">
+                    <span>мм</span>
+                  </div>
+                </div>
+              </div>
+              <div class="calculation-page__height">
+                <div class="input-wrapper">
+                  <input type="text" placeholder="1500" name="calc-height" id="calc-height">
+                  <span>мм</span>
+                </div>
+              </div>
+            </div>
+          
+
+          </div>
+          <div class="calculation-page__right">          
+            <div class="parametres">
+              <div class="parametres__title">Параметры окна</div>
+              <div class="parametres__input-wrapper">
+                <label for="steklopaket">
+                  Стеклопакет
+                  <select name="steclopaket-select" id="steklopaket">
+                    <option value="no-change">Не выбран</option>
+                    <option value="white">Белый</option>
+                    <option value="black">Черный</option>
+                    <option value="brown">Коричневый</option>
+                    <option value="gray">Серый</option>
+                  </select>
+                </label>
+                <label for="color_profile">
+                  Цвет профиля
+                  <select name="color_profile-select" id="color_profile">
+                    <option value="no-change">Не выбран</option>
+                    <option value="white">Белый</option>
+                    <option value="black">Черный</option>
+                    <option value="brown">Коричневый</option>
+                    <option value="gray">Серый</option>
+                  </select>
+                </label>
+                <label for="accesories">
+                  Аксессуары
+                  <select name="accesories-select" id="accesories">
+                    <option value="no-change">Не выбран</option>
+                    <option value="accesories-1">Отливы</option>
+                    <option value="accesories-2">Откосы</option>
+                    <option value="accesories-3">Подоконник</option>
+                  </select>
+                </label>
+              </div>
+
+            </div>
+
+          </div>
+        </div><!-- /page-wrapper -->
+
+        <button class="calc__btn btn" type="submit">
+          Рассчитать стоимость
+          <img src="img/icons/arrow-btn-right-white.svg" alt="icon-btn">
+        </button>
+      </form>
+    </div><!-- /container -->
+  </div>
+</section>
+		
+			<!-- about-calculation -->
+<section class="about-calculation" id="about-calculation">
+  <div class="container">
+    <h2 class="about-calculation__title section-title">
+      Онлайн калькулятор пластиковых окон
+    </h2>
+    <div class="about-calculation__text">
+      <p>
+        Калькулятор пластиковых окон поможет узнать стоимость ваших окон: выберите конфигурацию и комплектацию, а наши специалисты сделают достоверный расчёт.<br>
+Стоимость пластиковых окон зависит от многих параметров:
+      </p>      
+      <ul>
+        <li>
+          размера рамы,
+        </li>
+        <li>
+          количества створок и способа их открывания,
+        </li>
+        <li>
+          типа используемого стеклопакета,
+        </li>
+        <li>
+          варианта отделки пвх-профиля, и других.
+        </li>
+      </ul>
+      <p>
+        Чтобы наш менеджер мог всё учесть и сделать максимально точный и достоверный расчёт стоимости, задайте параметры каждого окна:
+      </p>
+      <p>
+        Выберите схему будущего окна с помощью иконок в левой части экрана.
+Выберите под рисунком тип каждой створки и способ ее открывания.
+В разделе «Параметры окна» внесите данные по ширине и высоте конструкции (в миллиметрах).
+Укажите тип стеклопакета и цвет профиля.
+Заказывая несколько окон, для перехода к следующей конструкции кликните «Добавить новое окно».
+Нажмите «Получить расчет» и укажите в заявке свои контактные данные.
+Получив необходимую информацию, менеджер выполнит расчет размера окон и назовет вам точную цену. Специалист свяжется с вами, чтобы уточнить возможные варианты.
+      </p>
+      
+    </div>
+  </div>
+</section>	
+			<!-- map -->
+<section class="map window" id="map">
+  <div class="map__iframe">
+    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A52496762378ffe61d856ee5ab57a71878a07e32127cb2ae5ed9d3849fbe6c764&amp;source=constructor" width="1280" height="400" frameborder="0"></iframe>
+  </div>
+  <div class="map__content">
+    <div class="container">
+     <div class="map__content-wrapper">
+        <div class="map__content-left">
+          <a class="map__content-tel header__tel" href="+78430112259">
+            + 7 (843) 011-22-59
+          </a>
+          <a href="#" class="map__content-place">
+            <img src="img/icons/header-place.svg" alt="icon-place">
+            <div class="map__content-place-inner place">
+              <div class="map__content-adres">г. Набережные Челны, ул. Пушкина, д. 7</div>
+              <div class="map__content-time">Режим работы: Круглосуточно</div>
+            </div>
+          </a>
+        </div>
+        <div class="map__content-right">
+          <a class="map__content-btn btn" href="#">
+            Оставить заявку
+            <img src="img/icons/arrow-btn-right-white.svg" alt="icon-btn">
+          </a>
+        </div>
+     </div>
+    </div>
+  </div>
+</section>		
+				
+		</main>
+		<!-- Footer -->
+<footer class="footer" id="footer">
+  <div class="container">
+    <div class="footer__wrapper">
+      <div class="footer__left">
+        <a class="logo footer__logo" href="#">
+          <img src="img/logo/logo.png" alt="logo">
+        </a>
+        <div class="footer__maker">Официальный производитель</div>
+        <div class="socials">
+          <ul class="socials__list">
+            <li class="socials__item">
+              <a href="#">
+                <img src="img/socials/vk.svg" alt="icon">
+              </a>
+            </li>
+            <li class="socials__item">
+              <a href="#">
+                <img src="img/socials/ok.svg" alt="icon">
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__center">
+        <div class="footer__menu-wrapper">
+          <div class="footer__menu">
+            <div class="footer__menu-title">
+              Услуги
+            </div>
+            <ul class="footer__menu-list">
+              <li class="footer__menu-item">
+                <a href="#">Калькулятор</a>
+              </li>
+              <li class="footer__menu-item">
+                <a href="#">Пластиковые окна</a>
+              </li>
+              <li class="footer__menu-item">
+                <a href="#">Лоджии и балконы</a>
+              </li>
+              <li class="footer__menu-item">
+                <a href="#">Остекление коттеджей</a>
+              </li>
+              <li class="footer__menu-item">
+                <a href="#">Аксессуары</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__menu">
+            <div class="footer__menu-title">
+              Компания
+            </div>
+            <ul class="footer__menu-list">
+              <li class="footer__menu-item">
+                <a href="#">О компании</a>
+              </li>
+              <li class="footer__menu-item">
+                <a href="#">Оплата и доставка</a>
+              </li>
+              <li class="footer__menu-item">
+                <a href="#">Монтаж</a>
+              </li>
+              <li class="footer__menu-item">
+                <a href="#">Публичная оферта</a>
+              </li>
+              <li class="footer__menu-item">
+                <a href="#">Контакты</a>
+              </li>
+            </ul>
+          </div>
+          
+        </div>
+      </div>
+      <div class="footer__right">
+        <a class="footer__tel header__tel" href="tel:78430112259">+ 7 (843) 011-22-59</a>
+        <a href="#" class="footer__place">
+          <img src="img/icons/header-place.svg" alt="icon-place">
+          <div class="place">
+            <div class="place-adres">г. Набережные Челны, ул. Пушкина, д. 7</div>
+            <div class="place-time">Режим работы: Круглосуточно</div>
+          </div>
+        </a>  
+        <button class="btn-reset footer__btn-modal btn" data-graph-path="modal-calc">
+          Сделать расчет
+          <img src="img/icons/arrow-btn-right-white.svg" alt="icon-btn">
+        </button>
+      </div>
+    </div>   
+  </div>
+</footer>
+<!-- modal -->
+<div class="graph-modal">
+
+  <div class="graph-modal__container modal-order" role="dialog" aria-modal="true" data-graph-target="modal-order"><!-- /modal-order -->
+    <button class="btn-reset js-modal-close graph-modal__close" aria-label="Закрыть модальное окно"></button>
+    <div class="graph-modal__content">
+      <div class="modal-order__title">
+        Хотите, мы Вам перезвоним?
+      </div>
+      <p class="modal-order__descr">
+        Оставьте заявку и&nbsp;мы&nbsp;подробно ответим
+        на&nbsp;все Ваши вопросы!
+      </p>
+      <form action="#" class="modal-order__form order-form">
+        <div class="order-form__wrapper d-flex justify-content-center justify-content-lg-between">
+          <div class="input-wrapper">
+            <input type="text" placeholder="Как вас зовут?">
+          </div>
+          <div class="input-wrapper">
+            <input type="tel" placeholder="Ваш номер телефона">
+          </div>
+        </div>
+        <button class="modal-order__form-btn" type="submit">Обратный звонок</button>
+        <div class="agreements text-center">
+          Нажимая на кнопку, вы даете согласие
+          на <a href="#">обработку своих персональных данных</a> 
+        </div>
+      </form>
+    </div>
+  </div>
+  
+</div>
+	</div>
+
+	<script src="js/app.min.js"></script>
+	<script src="//vjs.zencdn.net/7.10.2/video.min.js"></script>
+</body>
+
+</html>
+
+
+
+

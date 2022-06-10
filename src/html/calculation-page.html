@@ -1,0 +1,161 @@
+<!-- calculation-window -->
+<section class="calculation-page" id="calculation-page">
+  <div class="calculation-page__title-wrapper">
+    <div class="container">
+      <h1 class="calculation-page__title">
+        Виды остекления
+      </h1>
+    </div>
+  </div>
+  <div class="calculation-page__content">
+    <div class="container">
+      <form action="#">
+        <div class="tabs">
+          <ul class="tabs__nav">
+            <li class="tabs__nav-item"><button class="tabs__nav-btn btn tabs__nav-btn--active" type="button">Расчет для
+                квартиры</button></li>
+            <li class="tabs__nav-item"><button class="tabs__nav-btn btn" type="button">Расчет для Коттедж / дом</button>
+            </li>
+            <li class="tabs__nav-item"><button class="tabs__nav-btn btn" type="button">Расчет для Лоджия /
+                балкон</button></li>
+          </ul>
+        </div>
+
+        <select class="open-select" name="open-select" id="open-select">
+          <option value="open-1">Поворотно-откидная</option>
+          <option value="open-1">Поворотная</option>
+          <option value="open-1">Глухая</option>
+        </select>
+
+        <div class="calculation-page__wrapper">
+          <div class="calculation-page__left">
+            <div class="sliders-wrapper">
+              <div class="swiper calculation-page__slider">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide calculation-page__slide">
+                    <label for="calculation-page__slide-1">
+                      <input class="chexbox-1" type="checkbox" id="calculation-page__slide-1" checked>
+                      <span><img src="@img/calculation/window-sm-1.png" alt="window-image"></span>
+                    </label>
+                  </div>
+                  <div class="swiper-slide calculation-page__slide">
+                    <label for="calculation-page__slide-2">
+                      <input class="chexbox-1" type="checkbox" id="calculation-page__slide-2">
+                      <span><img src="@img/calculation/window-sm-2.png" alt="window-image"></span>
+                    </label>
+                  </div>
+                  <div class="swiper-slide calculation-page__slide">
+                    <label for="calculation-page__slide-3">
+                      <input class="chexbox-1" type="checkbox" id="calculation-page__slide-3">
+                      <span><img src="@img/calculation/window-sm-3.png" alt="window-image"></span>
+                    </label>
+                  </div>
+                  <div class="swiper-slide calculation-page__slide">
+                    <label for="calculation-page__slide-4">
+                      <input class="chexbox-1" type="checkbox" id="calculation-page__slide-4">
+                      <span><img src="@img/calculation/window-sm-4.png" alt="window-image"></span>
+                    </label>
+                  </div>
+                  <div class="swiper-slide calculation-page__slide">
+                    <label for="calculation-page__slide-5">
+                      <input class="chexbox-1" type="checkbox" id="calculation-page__slide-5">
+                      <span><img src="@img/calculation/window-sm-5.png" alt="window-image"></span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper calculation-lg-slider">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide calculation-lg-slide">
+                    <div class="calculation-lg-slide__img">
+                      <img src="@img/calculation/window-lg-1.png" alt="image">
+                    </div>
+                  </div>
+                  <div class="swiper-slide calculation-lg-slide">
+                    <div class="calculation-lg-slide__img">
+                      <img src="@img/calculation/window-lg-2.jpg" alt="image">
+                    </div>
+                  </div>
+                  <div class="swiper-slide calculation-lg-slide">
+                    <div class="calculation-lg-slide__img">
+                      <img src="@img/calculation/window-lg-3.jpg" alt="image">
+                    </div>
+                  </div>
+                  <div class="swiper-slide calculation-lg-slide">
+                    <div class="calculation-lg-slide__img">
+                      <img src="@img/calculation/window-lg-1.png" alt="image">
+                    </div>
+                  </div>
+                  <div class="swiper-slide calculation-lg-slide">
+                    <div class="calculation-lg-slide__img">
+                      <img src="@img/calculation/window-lg-1.png" alt="image">
+                    </div>
+                  </div>
+                </div>
+                <div class="calculation-window-width">
+                  <div class="calculation-window__line">
+                  </div>
+                  <div class="input-wrapper">
+                    <input type="text" placeholder="1500" name="calc-width" id="calc-width">
+                    <span>мм</span>
+                  </div>
+                </div>
+              </div>
+              <div class="calculation-page__height">
+                <div class="input-wrapper">
+                  <input type="text" placeholder="1500" name="calc-height" id="calc-height">
+                  <span>мм</span>
+                </div>
+              </div>
+            </div>
+          
+
+          </div>
+          <div class="calculation-page__right">          
+            <div class="parametres">
+              <div class="parametres__title">Параметры окна</div>
+              <div class="parametres__input-wrapper">
+                <label for="steklopaket">
+                  Стеклопакет
+                  <select name="steclopaket-select" id="steklopaket">
+                    <option value="no-change">Не выбран</option>
+                    <option value="white">Белый</option>
+                    <option value="black">Черный</option>
+                    <option value="brown">Коричневый</option>
+                    <option value="gray">Серый</option>
+                  </select>
+                </label>
+                <label for="color_profile">
+                  Цвет профиля
+                  <select name="color_profile-select" id="color_profile">
+                    <option value="no-change">Не выбран</option>
+                    <option value="white">Белый</option>
+                    <option value="black">Черный</option>
+                    <option value="brown">Коричневый</option>
+                    <option value="gray">Серый</option>
+                  </select>
+                </label>
+                <label for="accesories">
+                  Аксессуары
+                  <select name="accesories-select" id="accesories">
+                    <option value="no-change">Не выбран</option>
+                    <option value="accesories-1">Отливы</option>
+                    <option value="accesories-2">Откосы</option>
+                    <option value="accesories-3">Подоконник</option>
+                  </select>
+                </label>
+              </div>
+
+            </div>
+
+          </div>
+        </div><!-- /page-wrapper -->
+
+        <button class="calc__btn btn" type="submit">
+          Рассчитать стоимость
+          <img src="@img/icons/arrow-btn-right-white.svg" alt="icon-btn">
+        </button>
+      </form>
+    </div><!-- /container -->
+  </div>
+</section>

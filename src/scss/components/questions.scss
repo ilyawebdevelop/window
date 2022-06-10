@@ -1,0 +1,118 @@
+// questions
+.questions {
+  background-color: #F8F8F8;
+}
+
+
+.visually-hidden {
+	position: absolute !important;
+	clip: rect(1px 1px 1px 1px);
+	/* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+	padding: 0 !important;
+	border: 0 !important;
+	height: 1px !important;
+	width: 1px !important;
+	overflow: hidden;
+}
+
+.accordion {
+	width: 100%;
+	margin-bottom: 10px;
+  &.open {
+    .accordion__control {
+      background: linear-gradient(0deg, #FFDB8A 0%, rgba(255, 219, 138, 0.65) 100%);
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.accordion__control {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	list-style: none;
+	padding: 26px 34px;
+	border-radius: 3px; 
+	@media (max-width: 767px){
+		padding: 18px 20px;		
+	}
+}
+
+.accordion__control::-webkit-details-marker {
+	display: none;
+}
+
+.accordion__icon {
+	position: relative;
+	display: flex;
+  align-items: center;
+  justify-content: center;
+	width: 30px;
+	height: 30px;
+	@media (max-width: 767px){
+		width: 20px;
+		height: 20px;
+	}
+}
+
+.accordion[open] .accordion__icon {
+	transform: rotate(45deg);
+}
+
+// ex-3
+
+.accordion__control {
+	width: 100%;
+	cursor: pointer;
+  background-color: $white-color;
+}
+
+.accordion__content {
+	max-height: 0;
+	opacity: 0;
+	overflow: hidden;
+	padding: 0 20px;
+	will-change: max-height;
+	transition: all 0.3s ease-out;
+	box-sizing: content-box;
+  p {      
+    font-weight: $regular;
+    font-size: 16px;
+    line-height: 26px;
+    color: #636363;   
+    max-width: 790px; 
+		@media (max-width: 575px){
+			font-size: 14px;
+			line-height: 22px;
+		}
+  }
+}
+
+.accordion__title {
+  text-align: start;
+  font-weight: $medium;
+  font-size: 20px;
+  line-height: 23px;
+  color: $main-color;  
+	margin: 0;
+	@media (max-width: 767px){
+		font-size: 17px;
+		line-height: 20px;
+	}
+}
+
+.accordion__icon {
+	transition: transform 0.3s ease-out;
+}
+
+.open .accordion__icon {
+	transform: rotate(180deg);
+}
+
+.open .accordion__content {
+	opacity: 1;
+	padding: 20px;
+}

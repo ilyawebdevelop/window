@@ -1,0 +1,27 @@
+// Colors
+$main-color: #000;
+$gray-color: #636363;
+$gray-light-color: #7E7E7E;
+$white-color: #fff;
+$blue-color: #215EED;
+
+// Fonts
+$font-family: 'Roboto';
+$font-family-second: 'Bebas Neue';
+
+// Font-weights
+$light: 300;
+$regular: 400;
+$medium: 500;
+$semibold: 600;
+$bold: 700;
+$extrabold: 800;
+
+ // Containers
+:root { 
+  --content-width: 1280px;
+  --content-fluid-width: 1790px;
+  --container-offset: 15px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+  --container-fluid-width: calc(var(--content-fluid-width) + (var(--container-offset) * 2));
+}

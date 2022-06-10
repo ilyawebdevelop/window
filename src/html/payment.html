@@ -1,0 +1,66 @@
+<!-- payment -->
+<section class="payment" id="payment">
+  <div class="container">
+    <h2 class="payment__title section-title">
+      Формы оплаты
+    </h2>
+    <div class="payment__content">
+      <div class="payment__col">
+        <ul class="payment__content-list">
+          <li class="payment__content-item">
+            <div class="payment__content-icon">
+              <img src="@img/payment/payment-icon.svg" alt="icon">
+            </div>
+            <div class="payment__content-inner">
+              <div class="payment__content-title">
+                Наличными
+              </div>
+              <p class="payment__content-text">
+                Вы можете оплатить договор наличными менеджеру на дому или подъехать в один из офисов компании в рабочее время
+              </p>
+            </div>
+          </li>
+          <li class="payment__content-item">
+            <div class="payment__content-icon">
+              <img src="@img/payment/payment-icon2.svg" alt="icon">
+            </div>
+            <div class="payment__content-inner">
+              <div class="payment__content-title">
+                Банковский перевод
+              </div>
+              <p class="payment__content-text">
+                Вы можете произвести оплату безналичным банковским переводом по реквизитам, указанным в договоре
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="payment__col">
+        <div class="payment-callback">
+          <div class="payment-callback__title">
+            Выгодная рассрочка
+          </div>
+          <ul class="payment-callback__list">
+            <li class="payment-callback__item">
+              Качественные окна сейчас — оплата потом
+            </li>
+            <li class="payment-callback__item">
+              Без залогов, поручителей и процентов
+            </li>
+            <li class="payment-callback__item">
+              Оформляется в нашем офисе продаж
+            </li>
+          </ul>
+          <button class="btn-reset payment-callback__btn btn" data-graph-path="modal-order">
+            Оставить заявку
+            <img src="@img/payment/arrow-right-white.svg" alt="arrow">
+          </button>
+          <div class="payment-callback__icon-lg">
+            <img src="@img/payment/payment-lg.svg" alt="icon">
+          </div>
+        </div><!-- /payment-callback -->
+      </div>
+    </div>
+  </div>
+  @@include('callback-free.html',{})
+</section>
